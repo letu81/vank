@@ -11,7 +11,7 @@ gem 'coffee-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
+gem 'therubyracer',  platforms: :ruby
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
