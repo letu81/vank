@@ -51,8 +51,8 @@ gem 'rack-attack'
 # 支持解析xml
 gem 'actionpack-xml_parser'
 
-# Use postgresql as the database for Active Record
-gem 'pg'
+# Use mysql as the database for Active Record
+gem 'mysql2'
 
 # 上传组件
 # gem 'carrierwave'#, '~> 0.10.0'
@@ -99,11 +99,7 @@ gem 'redactor-rails'
 gem 'rest-client'
 
 # Use unicorn as the app server
-gem 'unicorn'
-gem 'unicorn-worker-killer'
-
-# puma
-#gem 'puma'
+gem 'puma'
 
 # Use Capistrano for deployment
 group :development do
