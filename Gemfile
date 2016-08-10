@@ -54,6 +54,8 @@ gem 'actionpack-xml_parser'
 # Use mysql as the database for Active Record
 gem 'mysql2'
 
+gem 'dalli', '2.7.6'
+
 # 上传组件
 # gem 'carrierwave'#, '~> 0.10.0'
 gem 'carrierwave', github: 'carrierwaveuploader/carrierwave'
