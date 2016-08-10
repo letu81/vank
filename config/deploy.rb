@@ -1,19 +1,14 @@
 # config valid only for Capistrano 3.1
 lock '3.5.0'
 
-set :application, 'nongjia'
+set :application, 'jam_wap'
 set :deploy_user, "deployer"
 
 set :scm, :git
-set :repo_url, "git@github.com:tomwey/#{fetch(:application)}.git"
+set :repo_url, "git@github.com:letu81/#{fetch(:application)}.git"
 
 set :sidekiq_config, -> { File.join(shared_path, 'config', 'sidekiq.yml') }
 set :pty,  false
-
-set :rbenv_type, :user
-set :rbenv_ruby, '2.0.0-p353'
-set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
-set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
 set :keep_releases, 5
 
