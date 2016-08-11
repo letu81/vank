@@ -1,9 +1,9 @@
 "zh-CN":
   active_admin:
-    # powered_by: "Copyright 2016 农家"
+    # powered_by: "Copyright 2016 佳安美"
     batch_actions:
       labels:
-        dashboard: "农家"
+        dashboard: "佳安美"
         block: "禁用"
         unblock: "启用"
         sale: "上架"

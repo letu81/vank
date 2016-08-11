@@ -1,7 +1,7 @@
 class MyFooter < ActiveAdmin::Component
   def build
     super(id: "footer")
-    para "Copyright #{Date.today.year} #{Setting.app_name}"
+    para "Copyright © 2014-#{Date.today.year} #{Setting.app_name}"
   end
 end
 ActiveAdmin.setup do |config|

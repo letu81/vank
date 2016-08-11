@@ -1,5 +1,5 @@
 defaults: &defaults
-  app_name: ""
+  app_name: "Jiananmei, LLC"
   domain: "127.0.0.1:3000"
   admin_emails:
     - "admin@admin.com"

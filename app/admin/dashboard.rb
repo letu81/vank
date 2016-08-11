@@ -1,8 +1,8 @@
 ActiveAdmin.register_page "Dashboard" do
 
-  menu priority: 1, label: '农家' 
+  menu priority: 1, label: '佳安美' 
 
-  content title: '农家' do
+  content title: '佳安美' do
     
     columns do
       
