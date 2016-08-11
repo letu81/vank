@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20160523073814) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"

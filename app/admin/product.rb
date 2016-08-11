@@ -41,13 +41,13 @@ index do
     product.on_sale ? "上架" : "下架"
   end
   column :images, sortable: false do |product|
-    # ul do
+    ul do
       product.images.each do |img|
         span do
           image_tag(img.url(:small), size: '60x60')
         end
       end
-    # end
+    end
   end
   actions defaults: false do |product|
     item "编辑", edit_admin_product_path(product)

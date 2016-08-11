@@ -43,7 +43,7 @@ gem 'redis-objects'
 gem 'redis-rails'
 
 # 后台管理系统
-gem 'activeadmin', github: 'activeadmin'
+gem 'activeadmin', '1.0.0.pre2'#, github: 'activeadmin'
 
 # 防止大量请求的IP
 gem 'rack-attack'
@@ -51,8 +51,8 @@ gem 'rack-attack'
 # 支持解析xml
 gem 'actionpack-xml_parser'
 
-# Use mysql as the database for Active Record
-gem 'mysql2'
+# Use postgresql as the database for Active Record
+gem 'pg'
 
 gem 'dalli', '2.7.6'
 
@@ -73,7 +73,7 @@ gem 'will_paginate-bootstrap'
 gem 'bootstrap_helper', '4.2.3'
 
 # 用户系统
-gem 'devise'
+gem 'devise', '~> 3.5.6'
 
 # YAML 配置信息
 gem 'settingslogic'
