@@ -131,7 +131,8 @@ form html: { multipart: true } do |f|
     f.input :detail_images, as: :file, input_html: { multiple: true }
     f.input :detail_images, as: :file, input_html: { multiple: true }
     f.input :detail_images, as: :file, input_html: { multiple: true }
-
+    Rails.logger.error "///////////////////////////"
+    Rails.logger.error  product.intro
     render partial: 'intro', locals: { :intro => product.intro }
     f.input :sort, hint: '值越大，显示越靠前'
   end
