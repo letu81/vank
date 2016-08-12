@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <%= stylesheet_link_tag 'home/style' %>
+  <title>佳安美</title>
+  <%= javascript_include_tag 'home/jquery-1.7.1.min' %>
+  <link rel="shortcut icon" href="<%= image_url('jam.ico') %>" />
+  <meta name="keywords" content="佳安美，深圳佳安美，智能家居，指纹锁，密码锁，电子锁，ic，app开锁" />
+  <meta name="description" content="佳安美，王力，盼盼，天地钩，万能互换，代理，加盟" />
+</head>
+<body>
+<div class="header">
+  <%= render 'share/header' %>
+</div>
+<!--banner-->
+<div class="sw_banner sv_banner">
+</div>
+<!--banner End-->
+
+<div class="jobbox">
+  <h1>售后服务</h1>
+</div>
+
+<div class="container">
+  <div class="content">
+        <div class="cus_serv">
+          <ul class="block">
+            <li class="promise">
+              <div class="">
+                <ul>
+                  <li>
+                    <%= image_tag('home/seven.png') %>
+                    <p class="prop">7天退货保障</p>
+                  </li>
+                  <li>
+                    <%= image_tag('home/exchange.png') %>
+                    <p class="prop">15天换货承诺</p>
+                  </li>
+                  <li>
+                    <%= image_tag('home/maintain.png') %>
+                    <p class="prop">1年免费维修</p>
+                  </li>
+                </ul>
+              <div>
+              <div></div>
+            </li>
+            <li>
+              <p> 退货流程</p>
+              <%= image_tag('home/cus_serv.png') %>
+            </li>
+            <li>
+              <p>邮寄资料</p>
+              <ul class="con_info">
+                <li>收件人：深圳佳安美智能科技有限公司</li>
+                <li>联系电话：151118837820</li>
+                <li>邮寄地址：深圳市宝安区沙井镇中心路堂权大厦西佳安美智能家居体验馆</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+  </div>
+</div>
+<!--footer-->
+<div class="footer">
+  <%= render 'share/footer' %>
+</div>
+</body>
+</html>

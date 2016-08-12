@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <%= stylesheet_link_tag 'home/style' %>
+  <title>佳安美</title>
+  <%= javascript_include_tag 'home/jquery-1.7.1.min' %>
+  <link rel="shortcut icon" href="<%= image_url('jam.ico') %>" />
+  <meta name="keywords" content="佳安美，深圳佳安美，智能家居，指纹锁，密码锁，电子锁，ic，app开锁" />
+  <meta name="description" content="佳安美，王力，盼盼，天地钩，万能互换，代理，加盟" />
+</head>
+<body class="bodybg">
+<div class="header">
+  <%= render 'share/header' %>
+</div>
+<!--banner-->
+<div class="dy_banner"></div>
+<!--banner End-->
+<div class="dynamic">
+  <dl>
+    <dt><em>22</em><i>7</i>月<span>2014年</span></dt>
+    <dd>
+      <ul>
+        <li>
+          <div class="imgbox"><%= link_to(image_tag('home/dttu1.jpg'), '/dynamic/1') %></div>
+          <h3><a href='/dynamic/1'>test</a></h3>
+
+          <p>test！</p>
+        </li>
+        <li>
+          <div class="imgbox"><%= link_to(image_tag('home/dttu2.jpg'), '/dynamic/1') %></div>
+          <h3><a href='/dynamic/1'>test？</a></h3>
+
+          <p>test！</p>
+        </li>
+      </ul>
+    </dd>
+  </dl>
+  <dl>
+    <dt><em>21</em><i>9</i>月</dt>
+    <dd>
+      <div class="con">
+        <div class="imgbox"><%= link_to(image_tag('home/dttu3.jpg'), '/dynamic/1') %></div>
+        <h3><a href='/dynamic/1'>test</a></h3>
+
+        <p>test</p>
+      </div>
+    </dd>
+  </dl>
+</div>
+<!--footer-->
+<div class="footer">
+  <%= render 'share/footer' %>
+</div>
+</body>
+</html>

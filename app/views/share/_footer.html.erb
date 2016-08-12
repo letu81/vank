@@ -1,0 +1,87 @@
+    <% cache("footer") do %>  
+      <div class='container footer-info'>
+        <ul class='menu-list'>
+          <li>
+            <h3 class='menu-tit'>
+              关于佳安美
+              <ul class='sub-menu-list'>
+                <li>
+                  <a href="/about">关于佳安美</a>
+                </li>
+                <li>
+                  <a href="/contact">联系我们</a>
+                </li>
+                <li>
+                  <a href="/jobs">诚聘英才</a>
+                </li>
+              </ul>
+            </h3>
+          </li>
+          <li>
+            <h3 class='menu-tit'>
+              佳安美动态
+              <ul class='sub-menu-list'>
+                <li>
+                  <a href="/dynamic">新闻与杂志</a>
+                </li>
+              </ul>
+            </h3>
+          </li>
+          <li>
+            <h3 class='menu-tit'>
+              售后服务
+              <ul class='sub-menu-list'>
+                <li>
+                  <a href="/service">售后服务</a>
+                </li>
+                <li>
+                  <a href="/faq">常见问题</a>
+                </li>
+              </ul>
+            </h3>
+          </li>
+          <li>
+            <h3 class='menu-tit'>
+              关注我们
+              <ul class='sub-menu-list'>
+                <li>
+                  <a id="wechat" href="javascript:void(0)"><span>
+                    官方微信
+                  </span>
+                  <%= image_tag('home/weixin.jpg', :class => 'wx-code', :alt => "官方微信") %>
+                  </a>
+                </li>
+                <li>
+                  <a href="http://weibo.com/u/3756654010">新浪微博</a>
+                </li>
+              </ul>
+            </h3>
+          </li>
+        </ul>
+        <div class='contact'>
+          <p class='service'>
+            客服电话
+          </p>
+          <p class='tel'>
+            400-070-5860
+          </p>
+          <p class='time'>
+            周一至周六 9:00-22:00
+          </p>
+        </div>
+      </div>
+      <div class='container footer-icp'>
+        <p>
+          Copyright © 2014 － <%= Date.current.year %> 深圳佳安美
+        </p>
+      </div>
+      <div class='robot' id='robot_box'>
+        <a id='robot_btn' href="tencent://message/?uin=394016672&Site=jiaanmei.com&Menu=yes">
+          <%= image_tag('home/chat-btn-bg.png', :alt => "客服露露") %>
+        </a>
+        <span>
+          客服露露
+        </span>
+      </div>
+    </div>
+  <% end %> 

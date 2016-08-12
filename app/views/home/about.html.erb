@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <%= stylesheet_link_tag 'home/style' %>
+  <title>佳安美</title>
+  <%= javascript_include_tag 'home/jquery-1.7.1.min' %>
+  <link rel="shortcut icon" href="<%= image_url('jam.ico') %>" />
+  <meta name="keywords" content="佳安美，深圳佳安美，智能家居，指纹锁，密码锁，电子锁，ic，app开锁" />
+  <meta name="description" content="佳安美，王力，盼盼，天地钩，万能互换，代理，加盟" />
+</head>
+<body>
+<div class="header">
+  <%= render 'share/header' %>
+</div>
+<!--banner-->
+<% cache("banner/about") do %>
+<div class="sw_banner gy_banner">
+  <div class="sw_text">
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;深圳市佳安美智能科技有限公司专业从事智能家居，智能安防的技术研发和推广的重点高科技型企业，是一家集科研、生产、设计、销售和服务为一体的专业化公司。 主要产品有各类智能家电、智能指纹密码锁、智能防盗门、智能指纹保管箱等，公司拥有专业的技术研发团队与生产实力为广大家庭致力打造智能家居安防生活，“佳安美”系列产品有价格低廉、安装方便、实用性强等显著优点。为真正普及和推广智能家居，智能安防事业奠定坚实的基础。</p>
+
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司自成立以来，在生产上始终以“今日的质量，明日的市场”为宗旨，在销售上始终坚持“诚信至上，服务万家”的经营理念，以优质的品质，齐全的品种，合理的价格，完善的售后服务，赢得了广大用户的信赖和赞誉，我们诚挚的欢迎各界人士的加入，共同发展，共创辉煌！</p>
+  </div>
+</div>
+<% end %>
+<!--banner End-->
+<div class="aboutcon">
+  <dl class="rt">
+    <dt class="cor1"><em>2014年5月</em></dt>
+    <dd><p>公司成立</p></dd>
+  </dl>
+  <dl>
+    <dt class="cor2"><em>2014年11月</em></dt>
+    <dd><p>专注于智能家居、指纹锁的研发生成</p></dd>
+  </dl>
+  <dl class="rt">
+    <dt class="cor3"><em>2015年12月</em></dt>
+    <dd><p>佳安美2.0上线</p></dd>
+  </dl>
+</div>
+<!--footer-->
+<div class="footer">
+  <%= render 'share/footer' %>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>佳安美智控</title>
+  <meta name="keywords" content="佳安美，深圳佳安美，智能家居，指纹锁，密码锁，电子锁，ic，app开锁" />
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <%= stylesheet_link_tag 'wap/wap' %>
+</head>
+<body>
+<div class="overlay"></div>
+<div id="modal1" class="modal">
+  <%#= image_tag('wap/QR-ode.png') %></div>
+<div class="swiper-container">
+  <div class="header-top">
+      <div  style="  
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'ZagBoldRegular', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-size: 32px;
+  color: #fff;
+  margin: 0;">佳安美智控</div>
+  </div>
+  <div class="swiper-wrapper">
+    <section class="swiper-slide swiperbj-a ">
+      <div class="swiper-Download ">
+        <a href="https://itunes.apple.com/app/idxxxxxx" class="swiper-Download-a"><%= image_tag('home/ios.png', class: 'resize') %></a>
+        <a href="/download" class="swiper-Download-b"><%= image_tag('home/android.png', class: 'resize') %></a>
+      </div>
+    </section>
+<!--
+    <section class="swiper-slide swiperbj-b">
+      <div class="swiper-Downloada">
+      </div>
+    </section> -->
+  </div>
+  <%= image_tag('wap/arrow.png', id: 'array', class: 'pages') %>
+</div>
+<%= javascript_include_tag 'wap/swiper.min', 'wap/jquery.min', 'wap/jquery.modal' %>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        mousewheelControl: true
+
+    })
+</script>
+</body>
+</html>
