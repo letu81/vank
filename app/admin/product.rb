@@ -128,12 +128,15 @@ form html: { multipart: true } do |f|
     f.input :stock
     f.input :images, as: :file, input_html: { multiple: true }
     f.input :detail_images, as: :file, input_html: { multiple: true }
-    f.input :intro
+    f.input :detail_images, as: :file, input_html: { multiple: true }
+    f.input :detail_images, as: :file, input_html: { multiple: true }
+    f.input :detail_images, as: :file, input_html: { multiple: true }
+
+    render partial: 'intro', locals: { :intro => product.intro }
     f.input :sort, hint: '值越大，显示越靠前'
   end
   
   actions
 end
-
 
 end
