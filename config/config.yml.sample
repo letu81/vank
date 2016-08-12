@@ -1,14 +1,14 @@
 defaults: &defaults
-  app_name: "Jiananmei, LLC"
+  app_name: "Jiaanmei, Ltd"
   domain: "127.0.0.1:3000"
   admin_emails:
-    - "admin@admin.com"
+    - "admin@jiaanmei.com"
   email_sender: 'noreply@jiaanmei.com'
   upload_url: ''
-  devise_secret_key: 'ssssssssssssssss'
+  devise_secret_key: ''
   wx_app_id: 'wx1e4984e8c8073064'
   wx_app_secret: '45eb2603ecf9bf97b0b25887b6085751'
-  wx_redirect_uri: 'www.sina.com.cn'
+  wx_redirect_uri: 'www.jiaanmei.com/shop/redirect'
 
 development:
   <<: *defaults

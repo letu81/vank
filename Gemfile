@@ -103,6 +103,8 @@ gem 'rest-client'
 # Use unicorn as the app server
 gem 'puma'
 
+gem 'actionpack-page_caching'
+
 # Use Capistrano for deployment
 group :development do
   

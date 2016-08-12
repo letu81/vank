@@ -2,6 +2,22 @@ Rails.application.routes.draw do
   
   mount RedactorRails::Engine => '/redactor_rails'
 
+  #web
+  get '' => 'home#index', as: :home
+  get 'about' => 'home#about', as: :about
+  get 'dynamic' => 'home#dynamic', as: :dynamic
+  get 'dynamic/:id' => 'home#detail', as: :detail
+  get 'contact' => 'home#contact', as: :contact
+  get 'jobs' => 'home#jobs', as: :jobs
+  get 'news' => 'home#news', as: :news
+  get 'service' => 'home#service', as: :service
+  get 'faq' => 'home#faq', as: :faq
+  get 'agent' =>'home#agent', as: :agent
+  get 'wap' => 'home#wap', as: :wap
+
+  get 'download' => 'download#index', as: :download
+  post 'feedback' => 'home#feedback', as: :feedback
+
   ######################### 微信公众平台开发 ###########################
   post '/wechat' => 'weixin/home#welcome', defaults: { format: 'xml' }
   get "/wechat" => 'weixin/home#show'
