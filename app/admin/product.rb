@@ -35,7 +35,9 @@ index do
   column :category, sortable: false
   column :price
   column :m_price
-  column :intro, sortable: false
+  column :intro, sortable: false  do |product|
+    product.intro.html_safe
+  end
   column :stock
   column '产品状态', :on_sale, sortable: false do |product|
     product.on_sale ? "上架" : "下架"
@@ -92,7 +94,9 @@ show do
     row :category
     row :price
     row :m_price
-    row :intro
+    row :intro do |product|
+      product.intro.html_safe
+    end
     row :stock
     row :images do |product|
       # ul do
@@ -131,8 +135,6 @@ form html: { multipart: true } do |f|
     f.input :detail_images, as: :file, input_html: { multiple: true }
     f.input :detail_images, as: :file, input_html: { multiple: true }
     f.input :detail_images, as: :file, input_html: { multiple: true }
-    Rails.logger.error "///////////////////////////"
-    Rails.logger.error  product.intro
     render partial: 'intro', locals: { :intro => product.intro }
     f.input :sort, hint: '值越大，显示越靠前'
   end
