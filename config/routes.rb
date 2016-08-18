@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get "/fetch_access_token" => 'weixin/home#fetch_access_token'
   
   # 微信商城
-  namespace :wechat_shop, path: 'shop' do
+  namespace :wechat_shop, path: 'wx-shop' do
     root 'home#index'
     resources :pages, path: :p, only: [:show]
     resources :products, only: [:show]

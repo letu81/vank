@@ -23,11 +23,11 @@ class Weixin::ApplicationController < ActionController::Base
       button: [
         { type: 'view',
           name: '商城',
-          url: 'https://nj.afterwind.cn/wx-shop'
+          url: 'https://jiaanmei.com/wx-shop'
         },
         { type: 'view',
           name: '个人中心',
-          url: 'https://nj.afterwind.cn/wx-shop/user/settings'
+          url: 'https://jiaanmei.com/wx-shop/user/settings'
         },
         
         # {
@@ -35,7 +35,7 @@ class Weixin::ApplicationController < ActionController::Base
         #   sub_button: [
         #     { type: 'view',
         #       name: '拔鸡毛',
-        #       url: 'https://nj.afterwind.cn/wx-shop'
+        #       url: 'https://jiaanmei.com/wx-shop'
         #     }
         #   ]
         # },
@@ -45,22 +45,22 @@ class Weixin::ApplicationController < ActionController::Base
         #     {
         #       type: 'view',
         #       name: '我的订单',
-        #       url: 'https://nj.afterwind.cn/wx-shop/orders'
+        #       url: 'https://jiaanmei.com/wx-shop/orders'
         #     },
         #     {
         #       type: 'view',
         #       name: '个人中心',
-        #       url: 'https://nj.afterwind.cn/wx-shop/user/settings'
+        #       url: 'https://jiaanmei.com/wx-shop/user/settings'
         #     },
         #     {
         #       type: 'view',
         #       name: '优惠券',
-        #       url: 'https://nj.afterwind.cn/wx-shop/coupons'
+        #       url: 'https://jiaanmei.com/wx-shop/coupons'
         #     },
         #     {
         #       type: 'view',
         #       name: '帮助',
-        #       url: 'https://nj.afterwind.cn/wx-shop/p/help'
+        #       url: 'https://jiaanmei.com/wx-shop/p/help'
         #     }
         #   ]
         # }
