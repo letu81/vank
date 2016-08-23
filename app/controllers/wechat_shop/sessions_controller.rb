@@ -22,7 +22,7 @@ class WechatShop::SessionsController < WechatShop::ApplicationController
     
     # 开始登录
     session['wechat.code'] = params[:code]
-    
+    Rails.logger.error "========#{Setting.wx_app_id}========" 
     resp = RestClient.get "https://api.weixin.qq.com/sns/oauth2/access_token", 
                    { :params => { 
                                   :appid      => Setting.wx_app_id,
