@@ -15,5 +15,16 @@ permit_params :key, :value, :note
 #   permitted
 # end
 
+form do |f|
+  f.semantic_errors
+  f.inputs "基本信息" do
+    f.input :key,     placeholder: '例如：regions or menu'
+    f.input :value,    placeholder: '多个值用英文,隔开 例如：深圳,广州'
+    f.input :note,    placeholder: '附加说明 例如：配送区域'
+
+  end
+  
+  f.actions
+end
 
 end
