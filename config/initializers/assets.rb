@@ -16,4 +16,9 @@ Rails.application.config.assets.precompile += %w(
  	home/homeban.js
  	home/plus2015.js
  	home/stellar.js
+
+ 	wap/wap.css
+ 	wap/swiper.min 
+ 	wap/jquery.min
+ 	wap/jquery.modal
 )
