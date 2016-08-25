@@ -12,7 +12,7 @@ directory application_path
 environment 'production'
 daemonize true
 pidfile "#{application_path}/tmp/pids/puma.pid"
-state_path "#{application_path}/tmp/pids/puma.state"
+state_path "#{application_path}/tmp/sockets/puma.state"
 stdout_redirect "#{application_path}/log/puma.stdout.log", "#{application_path}/log/puma.stderr.log"
 
 # Configure “min” to be the minimum number of threads to use to answer
@@ -20,8 +20,8 @@ stdout_redirect "#{application_path}/log/puma.stdout.log", "#{application_path}/
 #
 # The default is “0, 16”.
 #
-threads 4, 16
-workers 4
+threads 2, 16
+workers 2
 # Bind the server to “url”. “tcp://”, “unix://” and “ssl://” are the only
 # accepted protocols.
 #
@@ -34,7 +34,7 @@ workers 4
 # bind 'ssl://127.0.0.1:9292?key=path_to_key&cert=path_to_cert'
 #
 ## Comment the next line if you use apache.
-bind "unix://#{application_path}/tmp/sockets/jam_shop.socket"
+bind "unix://#{application_path}/tmp/sockets/jam.socket"
 
 # Instead of “bind 'ssl://127.0.0.1:9292?key=path_to_key&cert=path_to_cert'” you
 # can also use the “ssl_bind” option.

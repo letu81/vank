@@ -22,3 +22,4 @@ test:
 production:
   <<: *defaults
   domain: "jiaanmei.com"
+  secret_key_base: "f3e0005c9c92ad2ff625169c2bfe1917b386146cef4a29c35b93f611da3f7e980b9a7011891f34babe39b35214bfda92bfdb237df21611b01c1d9a55f36e6199"
