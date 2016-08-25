@@ -9,6 +9,7 @@ defaults: &defaults
   wx_app_secret: '025cd93b55509693523ca67afc016988'
   wx_mch_id: ''
   wx_pay_api_key: ''
+  wx_pay_notify_url: ''
   wx_redirect_uri: 'http://www.jiaanmei.com/wx-shop/redirect'
 
 development:

@@ -2,8 +2,7 @@ class HomeController < ApplicationController
   caches_page :index, :about, :agent, :contact, :detail, :dynamic, :faq, :jobs, :service, :wap
 
   def index
-    ua = request.env['HTTP_USER_AGENT'].downcase
-    if ua.include?('android') || ua.include?('iphone')
+    if request.env['HTTP_USER_AGENT'].downcase.match(/android|iphone/)
       redirect_to action: :wap
     else
       render layout: false
