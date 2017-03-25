@@ -20,7 +20,7 @@
   <%= render 'share/header' %>
 </div>
 <div class="bnbut">
-  <a href="https://itunes.apple.com/app/idxxxxxx" title="苹果下载"><%= image_tag('home/ios.png') %></a>
+  <a href="javascript:void(0);" title="苹果下载"><%= image_tag('home/ios.png') %></a>
   <a href="/download" title="安卓下载"><%= image_tag('home/android.png') %></a>
   <ul style="margin-top: 30px;">
     <li>
@@ -78,7 +78,6 @@
   </ul>
 </div>
 <!--banner-->
-<% cache("home_banner") do %> 
 <div class="main_visual">
   <div class="flicking_con">
     <div class="flicking_inner">
@@ -103,7 +102,7 @@
   <a href="javascript:;" id="btn_prev"></a>
   <a href="javascript:;" id="btn_next"></a>
 </div>
-<% end %>
+
 <!--banner End-->
 <div class="activebg onebg" data-stellar-background-ratio="0.05"></div>
 <div style="height: 680px; background: linear-gradient(#fff,#333) no-repeat center">
