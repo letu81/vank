@@ -10,7 +10,7 @@ class WechatShop::PagesController < WechatShop::ApplicationController
     if @page.slug == 'help' && params[:from] == 'wx'
       @from = "#{settings_wechat_shop_user_path}"
     else
-      if request.referer and request.referer.include?('nj.afterwind.cn')
+      if request.referer and request.referer.include?('jiaanmei.com')
         @from = request.referer
       else
         @from = nil
