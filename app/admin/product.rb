@@ -1,9 +1,8 @@
 ActiveAdmin.register Product do
-
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :category_id, :title, :price, :m_price, :intro, :stock, {images:[]}, {detail_images:[]}, :sort
+permit_params :category_id, :title, :price, :m_price, :intro, :stock, {images:[]}, {detail_images:[]}, {param_images:[]}, :sort
 #
 # or
 #
@@ -12,7 +11,7 @@ permit_params :category_id, :title, :price, :m_price, :intro, :stock, {images:[]
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-menu priority: 4, label: "产品"
+menu priority: 2, label: "产品", parent: "产品中心"
 
 actions :index, :show, :new, :create, :edit, :update
 
@@ -99,23 +98,33 @@ show do
     end
     row :stock
     row :images do |product|
-      # ul do
+      ul do
         product.images.each do |img|
           span do
             image_tag(img.url(:small))
           end
         end
-      # end
+      end
     end
     
     row :detail_images do |product|
-      # ul do
+       ul do
         product.detail_images.each do |img|
           div do
             image_tag(img.url)
           end
         end
-      # end
+       end
+    end
+
+    row :param_images do |product|
+       ul do
+        product.param_images.each do |img|
+          div do
+            image_tag(img.url)
+          end
+        end
+       end
     end
     
   end
@@ -130,11 +139,14 @@ form html: { multipart: true } do |f|
     f.input :price
     f.input :m_price
     f.input :stock
+    f.input :images, as: :file, input_html: { multiple: true }, hint: '所有缩略图正方形大小一样，尺寸不小于500x500'
     f.input :images, as: :file, input_html: { multiple: true }
+    f.input :images, as: :file, input_html: { multiple: true }
+    f.input :detail_images, as: :file, input_html: { multiple: true }, hint: '所有简介图宽度最好一样，不小于1280'
     f.input :detail_images, as: :file, input_html: { multiple: true }
     f.input :detail_images, as: :file, input_html: { multiple: true }
     f.input :detail_images, as: :file, input_html: { multiple: true }
-    f.input :detail_images, as: :file, input_html: { multiple: true }
+    f.input :param_images, as: :file, input_html: { multiple: true }, hint: '宽度最好不小于1280'
     render partial: 'intro', locals: { :intro => product.intro }
     f.input :sort, hint: '值越大，显示越靠前'
   end

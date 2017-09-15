@@ -15,6 +15,8 @@ permit_params :partner_id, :money, { orders: [] }, :note
 
 # actions except: [:destroy]
 
+menu priority: 1, label: "财务记录", parent: "更多"
+
 actions :all, except: [:destroy]
 
 before_create do |trade|

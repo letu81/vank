@@ -13,6 +13,8 @@ permit_params :image, :link, :sort
 #   permitted
 # end
 
+menu priority: 4, label: "广告", parent: "更多"
+
 index do
   selectable_column
   column('#', id) { |banner| link_to banner.id, admin_banner_path(banner) }

@@ -2,68 +2,94 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <%= stylesheet_link_tag 'home/style' %>
-  <title>佳安美</title>
-  <%= javascript_include_tag 'home/jquery-1.7.1.min' %>
-  <link rel="shortcut icon" href="<%= image_url('jam.ico') %>" />
-  <meta name="keywords" content="佳安美，深圳佳安美，智能家居，指纹锁，密码锁，电子锁，ic，app开锁" />
-  <meta name="description" content="佳安美，王力，盼盼，天地钩，万能互换，代理，加盟" />
+  <title>凡客 - 售后服务</title>
+  <link rel="shortcut icon" href="<%= image_url('fanke.ico') %>" />
+  <meta name="keywords" content="凡客，深圳凡客，智能家居，智能安防，智能网关，智能锁，指纹锁，密码锁，电子锁，app开锁，远程开锁，wifi，zigbee，蓝牙，433，RFID，射频识别，低功耗，无线，热点，双向，方案，定制，公众号，小程序" />
+  <meta name="description" content="凡客，王力，盼盼，天地钩，万能互换，代理，加盟，六合一，记录，安全，便捷，省心，稳定，实惠，性价比高，好用，简洁，推荐，淘宝，天猫，京东，网购，值得买，优惠，团购，直销，原厂，专业" />
+  <%= stylesheet_link_tag 'animate', 'bootsnav', 'bootstrap.min', 'font-awesome.min', 'home/style' %>
+  <!-- share start -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+  <!-- share end -->
+
+  <%= javascript_include_tag 'jquery-2.1.1.min',
+                             'bootstrap.min',
+                             'bootsnav' %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'home/respond.min.js', 'home/html5shiv.min.js' %>
+  <![endif]-->
+
+  <%= csrf_meta_tags %>
 </head>
 <body>
-<div class="header">
+
+<!-- header start -->
+<div id="header">
   <%= render 'share/header' %>
 </div>
-<!--banner-->
-<div class="sw_banner sv_banner">
-</div>
-<!--banner End-->
+<!-- header end -->
 
-<div class="jobbox">
-  <h1>售后服务</h1>
-</div>
+<!-- service start -->
+<div class="jam-index-customize jam-index-body">
+  <div class="container">
+    <div class="row">
+      <div class="area-title">
+        <h3 class="visible" data-plugin="appear" data-animate="fade" data-repeat="false">售后服务</h3>
+        <p class="desc visible" data-plugin="appear" data-animate="fade" data-repeat="false"> Service</p>
+        </a>
+      </div>
 
-<div class="container">
-  <div class="content">
-        <div class="cus_serv">
-          <ul class="block">
-            <li class="promise">
-              <div class="">
-                <ul>
-                  <li>
-                    <%= image_tag('home/seven.png') %>
-                    <p class="prop">7天退货保障</p>
-                  </li>
-                  <li>
-                    <%= image_tag('home/exchange.png') %>
-                    <p class="prop">15天换货承诺</p>
-                  </li>
-                  <li>
-                    <%= image_tag('home/maintain.png') %>
-                    <p class="prop">1年免费维修</p>
-                  </li>
-                </ul>
-              <div>
-              <div></div>
-            </li>
-            <li>
-              <p> 退货流程</p>
-              <%= image_tag('home/cus_serv.png') %>
-            </li>
-            <li>
-              <p>邮寄资料</p>
-              <ul class="con_info">
-                <li>收件人：深圳佳安美智能科技有限公司</li>
-                <li>联系电话：151118837820</li>
-                <li>邮寄地址：深圳市宝安区沙井镇中心路堂权大厦西佳安美智能家居体验馆</li>
+      <div class="index_customize">
+        <div class="section">
+          <div class="service-content">
+            <div class="cus_serv">
+              <ul class="block">
+                <li class="promise">
+                  <div>
+                    <ul>
+                      <li>
+                        <%= image_tag('home/seven.png') %>
+                        <p class="prop">7天退货保障</p>
+                      </li>
+                      <li>
+                        <%= image_tag('home/exchange.png') %>
+                        <p class="prop">15天换货承诺</p>
+                      </li>
+                      <li>
+                        <%= image_tag('home/maintain.png') %>
+                        <p class="prop">1年免费维修</p>
+                      </li>
+                    </ul>
+                  <div>
+                </li>
+
+                <li>
+                  <p> 退货流程</p>
+                  <%= image_tag('home/cus_serv.png') %>
+                </li>
+
+                <li>
+                  <p>邮寄资料</p>
+                  <ul class="con_info">
+                    <li>收件人：邓先生</li>
+                    <li>联系电话：139022475301</li>
+                    <li>收件地址：深圳市宝安区松岗芙蓉路9号A区7楼（桃花源科技园松岗分园）</li>
+                  </ul>
+                </li>
               </ul>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
+      </div>
+    </div>
   </div>
 </div>
-<!--footer-->
+<!-- service end -->
+
+<!-- footer start -->
 <div class="footer">
   <%= render 'share/footer' %>
 </div>
+<!-- footer end -->
 </body>
 </html>

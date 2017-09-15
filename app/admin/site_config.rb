@@ -1,6 +1,6 @@
 ActiveAdmin.register SiteConfig do
 
-menu priority: 1, label: '站点配置'
+menu priority: 3, label: "站点配置", parent: "系统管理"
 
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters

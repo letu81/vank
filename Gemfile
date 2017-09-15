@@ -1,8 +1,8 @@
 source 'https://ruby.taobao.org'
 
-ruby '2.3.0'
+ruby '2.4.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '~> 4.2.8'
 
 gem 'sprockets'
 gem 'sass-rails'
@@ -43,7 +43,7 @@ gem 'redis-objects'
 gem 'redis-rails'
 
 # 后台管理系统
-gem 'activeadmin', '1.0.0.pre2'#, github: 'activeadmin'
+gem 'activeadmin', '1.1.0'
 
 # 防止大量请求的IP
 gem 'rack-attack'
@@ -52,9 +52,9 @@ gem 'rack-attack'
 gem 'actionpack-xml_parser'
 
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'mysql2', '~> 0.4.8'
 
-gem 'dalli', '2.7.6'
+gem 'dalli', '~> 2.7', '>= 2.7.6'
 
 # 上传组件
 # gem 'carrierwave'#, '~> 0.10.0'
@@ -64,16 +64,16 @@ gem 'mini_magick'#,'~> 4.2.7'#, require: false
 gem 'posix-spawn'
 
 # Bootstrap UI
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem "font-awesome-rails"
 
 # 分页
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
-gem 'bootstrap_helper', '4.2.3'
+gem 'bootstrap_helper', '~> 4.2', '>= 4.2.3'
 
 # 用户系统
-gem 'devise', '~> 3.5.6'
+gem 'devise', '~> 4.3'
 
 # YAML 配置信息
 gem 'settingslogic'

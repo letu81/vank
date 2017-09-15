@@ -1,0 +1,15 @@
+<%# cache product do %>
+<div class="base-info">
+  <h2 class="title"><%= product.title %></h2>
+  <%- if product.intro -%>
+  <p><%= raw product.intro %></p>
+  <%- end -%>
+  <p class="green">市场价 ¥ <span class="price"><%= product.m_price %></span></p>
+  <p class="green">促销价 ¥ <span class="vip-price"><%= product.price %></span></p>
+  
+  <!--<a class="subscibe_wechat" href="javascript:void(0)">
+    扫码关注微信商城直接购买？<i class="fa fa-qrcode"></i>
+    <%#= image_tag('share/wechat.png', :class => 'wechat-mall-qrcode', :alt => "jam_mall") %>
+  </a>-->
+</div>
+<%# end %>

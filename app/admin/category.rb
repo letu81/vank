@@ -13,7 +13,7 @@ permit_params :list, :of, [:name, :image, :sort], :on, :model
 #   permitted
 # end
 
-menu priority: 3, label: "类别"
+menu priority: 1, label: "类别", parent: "产品中心"
 
 actions :all, except: [:destroy]
 

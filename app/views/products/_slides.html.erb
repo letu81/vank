@@ -1,0 +1,26 @@
+<%# cache product do %>
+<div class="product-images">
+  <div id="product-carousel-images" class="carousel slide" data-ride="carousel" data-interval="3000">
+    <% if product.images.size > 1 %>
+    <ol class="carousel-indicators">
+      <% product.images.each_with_index do |image_url, index| %>
+          <li data-target="#product-carousel-images" data-slide-to="<%= index %>" class="<%= index == 0 ? "active" : "" %>"></li>
+      <% end %>
+    </ol>
+    <% end %>
+
+    <div class="carousel-inner" role="listbox">
+      <% product.images.each_with_index do |image, index| %>
+        <div class="item <%= index == 0 ? "active" : "" %>">
+          <div class="center"><%= image_tag image.url(:thumb)  %></div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <a class="carousel-control left" href="#product-carousel-images" 
+                     data-slide="prev"><i class="fa fa-arrow-circle-left"></i></a>
+  <a class="carousel-control right" href="#product-carousel-images" 
+                     data-slide="next"><i class="fa fa-arrow-circle-right"></i></a>
+</div>
+<%# end %>

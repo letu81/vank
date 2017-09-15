@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>凡客 - <%=h @product.title %></title>
+  <link rel="shortcut icon" href="<%= image_url('fanke.ico') %>" />
+  <meta name="keywords" content="凡客，深圳凡客，智能家居，智能安防，智能网关，智能锁，指纹锁，密码锁，电子锁，app开锁，远程开锁，wifi，zigbee，蓝牙，433，RFID，射频识别，低功耗，无线，热点，双向，方案，定制，公众号，小程序" />
+  <meta name="description" content="<%=h @product.title %> <%= strip_tags(@product.intro) %>" />
+  <%= stylesheet_link_tag 'animate', 'bootsnav', 'bootstrap.min', 'font-awesome.min', 'home/style', 'product/product' %>
+  <!-- share start -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+  <!-- share end -->
+
+  <%= javascript_include_tag 'jquery-2.1.1.min',
+                             'bootstrap.min',
+                             'bootsnav' %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'home/respond.min.js', 'home/html5shiv.min.js' %>
+  <![endif]-->
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- header start -->
+<div id="header">
+  <%= render 'share/header' %>
+</div>
+<!-- header end -->
+
+<!-- product start -->
+<div class="jam-index-body">
+  <div class="container grey-box">
+    <div class="row">
+      <div class="col-md-7">
+        <%= render 'slides', product: @product %>
+      </div>
+
+      <div class="col-md-5">
+        <%= render 'product_base_info', product: @product %>
+      </div>  
+    </div>
+  </div>
+</div>
+
+<div class="jam-index-body">
+  <div class="container grey-box">
+    <div class="row">
+      <div class="col-md-9 product">
+        <div class="vertical-divider"></div>
+        <%= render 'product_detail_info', product: @product %>
+      </div>
+
+      <div class="col-md-3 product">
+        <div class="vertical-divider"></div>
+        <%= render 'product_hot', products: @hot_products %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- product end -->
+
+<!-- footer start -->
+<div class="footer">
+  <%= render 'share/footer' %>
+</div>
+<!-- footer end -->
+</body>
+</html>

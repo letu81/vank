@@ -9,9 +9,14 @@ class CreateCoupons < ActiveRecord::Migration
       t.date :expired_on,   null: false # 有效期
       t.datetime :actived_at            # 激活优惠券的时间
       t.integer :coupon_type, default: Coupon::DISCOUNT # 默认是打折类型
-      t.references :user, index: true, foreign_key: true
+      t.integer :user_id
 
       t.timestamps null: false
     end
+
+    add_index :coupons, :title
+    add_index :coupons, :expired_on
+    add_index :coupons, :user_id
+    add_index :coupons, [:expired_on, :user_id]
   end
 end

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>凡客 - 支付宝小程序定制</title>
+  <link rel="shortcut icon" href="<%= image_url('fanke.ico') %>" />
+  <meta name="keywords" content="凡客，深圳凡客，智能家居，智能安防，智能网关，智能锁，指纹锁，密码锁，电子锁，app开锁，远程开锁，wifi，zigbee，蓝牙，433，RFID，射频识别，低功耗，无线，热点，双向，方案，定制，公众号，小程序" />
+  <meta name="description" content="凡客，王力，盼盼，天地钩，万能互换，代理，加盟，六合一，记录，安全，便捷，省心，稳定，实惠，性价比高，好用，简洁，推荐，淘宝，天猫，京东，网购，值得买，优惠，团购，直销，原厂，专业" />
+  <%= stylesheet_link_tag 'animate', 'bootsnav', 'bootstrap.min', 'font-awesome.min', 'home/style', 'customize/customize' %>
+
+  <!-- share start -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+  <!-- share end -->
+  
+  <%= javascript_include_tag 'jquery-2.1.1.min',
+                             'bootstrap.min',
+                             'bootsnav' %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'home/respond.min.js', 'home/html5shiv.min.js' %>
+  <![endif]-->
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- header start -->
+<div id="header">
+  <%= render 'share/header' %>
+</div>
+<!-- header end -->
+
+<!-- team start -->
+<div class="jam-index-customize">
+  <div class="container">
+    <div class="team">
+      <%= image_tag('customize/team.png') %>
+    </div>
+  </div>
+</div>
+<!-- team end -->
+
+<!-- applet customize start -->
+<div class="jam-index-customize jam-index-body">
+  <div class="container">
+    <div class="row">
+      <div class="area-title">
+        <h3 class="visible" data-plugin="appear" data-animate="fade" data-repeat="false">支付宝小程序定制</h3>
+        <p class="desc visible" data-plugin="appear" data-animate="fade" data-repeat="false">Customize alipay applet</p>
+        </a>
+      </div>
+
+      <div class="index_customize">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- applet customize end -->
+
+<!-- applet sample start -->
+<div class="jam-index-customize jam-index-body">
+  <div class="container">
+    <div class="row">
+      <div class="area-title">
+        <h3 class="visible" data-plugin="appear" data-animate="fade" data-repeat="false">支付宝小程序案例</h3>
+        <p class="desc visible" data-plugin="appear" data-animate="fade" data-repeat="false">Alipay applet sample</p>
+        </a>
+      </div>
+
+      <div class="index_customize">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- applet sample end -->
+
+<!-- footer start -->
+<div class="footer">
+  <%= render 'share/footer' %>
+</div>
+<!-- footer end -->
+</body>
+</html>

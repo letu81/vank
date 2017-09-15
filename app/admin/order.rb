@@ -1,6 +1,6 @@
 ActiveAdmin.register Order do
 
-menu priority: 5, label: "订单"
+menu priority: 1, label: "订单", parent: "订单中心"
 
 permit_params :note, :quantity, :total_fee, :discount_fee
 

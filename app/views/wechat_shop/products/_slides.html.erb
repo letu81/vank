@@ -1,10 +1,10 @@
-<% cache product do %>
+<%# cache product do %>
 <div class="product-images">
   <div id="carousel-images" class="carousel slide" data-ride="carousel" data-interval="3000">    
     <!-- Indicators -->
     <% if product.images.size > 1 %>
     <ol class="carousel-indicators">
-      <% product.images.each_with_index do |image_url, index| %>
+      <% product.images.each_with_index do |_, index| %>
           <li data-target="#carousel-images" data-slide-to="<%= index %>" class="<%= index == 0 ? "active" : "" %>"></li>
       <% end %>
     </ol>
@@ -20,4 +20,4 @@
     </div>
   </div>
 </div>
-<% end %>
+<%# end %>

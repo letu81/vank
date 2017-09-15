@@ -9,11 +9,33 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w(
 	wechat.css 
 	wechat.js 
+
+	font-awesome.min.css
+	animate.css
+	bootsnav.css
+	bootstrap.min.css
+
 	home/style.css
+
+	fonts/fontawesome-webfont.eot
+	fonts/fontawesome-webfont.svg
+	fonts/fontawesome-webfont.ttf
+	fonts/fontawesome-webfont.woff
+	fonts/fontawesome-webfont.woff2
+	fonts/fontawesome-webfont.otf
+
+	product/product.css
+	customize/customize.css
+
+	bootsnav.js
+	bootstrap.min.js
+	html5shiv.min.js
+	jquery-2.1.1.min.js
+ 	respond.min.js
+ 	jquery.ui.datepicker-zh-CN.js
+ 	
  	home/home.js
- 	home/jquery.touchSlider.js
- 	home/jquery-1.7.1.min.js
- 	home/homeban.js
+
  	home/plus2015.js
  	home/stellar.js
 

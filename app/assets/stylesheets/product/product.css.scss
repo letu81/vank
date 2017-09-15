@@ -1,0 +1,77 @@
+.grey-box {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    border-color: rgba(0, 0, 0, 0.14);
+    box-shadow: 0 3px 8px -6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.grey-box .product {
+	padding: 20px;
+}
+
+.price {
+	position: static;
+	text-decoration:line-through;
+    color: #333;
+    padding-left: 0;
+}
+
+.vip-price {
+	vertical-align: middle;
+    font-size: 30px;
+    color: #FF0036;
+    font-weight: bolder;
+    font-family: Arial;
+    -webkit-font-smoothing: antialiased;
+}
+
+.panel-product {
+    border-color: #cccccc;
+    padding: 20px;
+    min-width: 200px;
+}
+
+.panel-product .vip-price {
+	vertical-align: middle;
+    font-size: 16px;
+    color: #FF0036;
+    font-weight: bolder;
+    font-family: Arial;
+    -webkit-font-smoothing: antialiased;
+}
+
+.subscibe_wechat {
+    position: relative;
+	vertical-align: middle;
+    font-size: 16px;
+    color: #FF0036;
+    font-weight: bolder;
+    font-family: Microsoft Yahei;
+    -webkit-font-smoothing: antialiased;
+}
+
+.subscibe_wechat .wechat-mall-qrcode{
+    display: none;
+    position: absolute;
+    top: -110px;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+.subscibe_wechat:hover{
+    color: #ff6666;
+}
+
+.subscibe_wechat:hover .wechat-mall-qrcode{
+    display: block;
+}
+
+.list-group a{
+    text-decoration: none;
+}
+
+/* ============ end =========*/
+

@@ -1,21 +1,16 @@
-class MyFooter < ActiveAdmin::Component
-  def build
-    super(id: "footer")
-    para "Copyright © 2014-#{Date.today.year} #{Setting.app_name}"
-  end
-end
 ActiveAdmin.setup do |config|
   # == Site Title
   #
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "后台系统"
+  config.site_title = "凡客管理系统"
   
   config.comments = false
 
   # 自定义页脚
-  config.view_factory.footer = MyFooter
+    # 自定义页脚
+  config.footer = "Copyright © 2014-#{Date.today.year} #{Setting.app_name}"
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
@@ -163,7 +158,7 @@ ActiveAdmin.setup do |config|
   # To understand how to localize your app with I18n, read more at
   # https://github.com/svenfuchs/i18n/blob/master/lib%2Fi18n%2Fbackend%2Fbase.rb#L52
   #
-  config.localize_format = :long
+  config.localize_format = :short
 
   # == Setting a Favicon
   #

@@ -1,8 +1,8 @@
 defaults: &defaults
-  app_name: "Jiaanmei, Ltd"
+  app_name: "vank, Ltd"
   admin_emails:
-    - "admin@jiaanmei.com"
-  email_sender: 'noreply@jiaanmei.com'
+    - "admin@vank.com"
+  email_sender: 'noreply@vank.com'
   upload_url: ''
   devise_secret_key: ''
   wx_app_id: 'wx4b61bf7bfd47921e'
@@ -10,7 +10,7 @@ defaults: &defaults
   wx_mch_id: ''
   wx_pay_api_key: ''
   wx_pay_notify_url: ''
-  wx_redirect_uri: 'http://www.jiaanmei.com/wx-shop/redirect'
+  wx_redirect_uri: 'http://www.vank.com/wx-shop/redirect'
 
 development:
   <<: *defaults
@@ -22,5 +22,5 @@ test:
 
 production:
   <<: *defaults
-  domain: "jiaanmei.com"
+  domain: "Vank.com"
   secret_key_base: "f3e0005c9c92ad2ff625169c2bfe1917b386146cef4a29c35b93f611da3f7e980b9a7011891f34babe39b35214bfda92bfdb237df21611b01c1d9a55f36e6199"

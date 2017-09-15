@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>凡客</title>
+  <meta name="keywords" content="凡客，深圳凡客，智能家居，指纹锁，密码锁，电子锁，ic，app开锁" />
+  <meta name="description" content="凡客，王力，盼盼，天地钩，万能互换，代理，加盟" />
+  <%= stylesheet_link_tag 'animate', 'bootsnav', 'bootstrap.min', 'font-awesome', 'home/style' %>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+  <%= javascript_include_tag 'jquery-2.1.1.min',
+                             'bootstrap.min',
+                             'bootsnav' %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'home/respond.min.js', 'home/html5shiv.min.js' %>
+  <![endif]-->
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- header start -->
+<div id="header">
+  <%= render 'share/header' %>
+</div>
+
+
+<div class="affairs">
+  <div class="sw">
+    <h3>合作伙伴</h3>
+  </div>
+</div>
+
+<!--footer-->
+<div class="footer">
+  <%= render 'share/footer' %>
+</div>
+</body>
+</html>

@@ -15,6 +15,8 @@ permit_params :user_id, :coupon_id, :expired_on
 
 # actions :new, :create, :destroy
 
+menu priority: 3, label: "优惠记录", parent: "优惠中心"
+
 filter :coupon, as: :check_boxes, label: '优惠券'
 filter :user, label: '优惠券所属用户', collection: proc { User.all.map { |u| [u.nickname, u.id] } }
 filter :expired_on

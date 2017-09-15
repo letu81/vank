@@ -1,7 +1,7 @@
 ActiveAdmin.register AdminUser do
   permit_params :email, :password, :password_confirmation
 
-  menu priority: 168, label: "管理员"
+  menu priority: 1, label: "管理员", parent: "系统管理"
 
   actions :all, except: [:destroy, :edit, :update]
 

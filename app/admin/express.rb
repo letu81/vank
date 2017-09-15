@@ -3,7 +3,8 @@ ActiveAdmin.register Express do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-menu priority: 18, label: "快递"
+
+menu priority: 5, label: "快递", parent: "更多"
 
 permit_params :name, :exp_no, :order_id, :company_code
 # permit_params :list, :of, :attributes, :on, :model

@@ -5,6 +5,8 @@ ActiveAdmin.register DiscountEvent do
 #
 permit_params :title, :body, :expired_on, :score, :code, { coupon_ids: [] }
 
+menu priority: 2, label: "优惠活动", parent: "优惠中心"
+
 filter :code
 filter :title
 filter :body

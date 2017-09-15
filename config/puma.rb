@@ -7,7 +7,7 @@
 # note that config/gitlab.yml web path should also be changed
 # ENV['RAILS_RELATIVE_URL_ROOT'] = "/gitlab"
 
-application_path = '/home/tutu/myapp/demo/jam_shop'
+application_path = '/Users/letu/Myapp/railsapp/new/rmt'
 directory application_path
 environment 'production'
 daemonize true

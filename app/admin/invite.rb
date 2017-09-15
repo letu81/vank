@@ -5,6 +5,8 @@ ActiveAdmin.register Invite do
 #
 permit_params :title, :body, :share_body, :link, :icon, :inviter_benefits, :invitee_benefits, :score
 
+menu priority: 3, label: "邀请", parent: "更多"
+
 filter :title
 filter :body
 filter :inviter_benefits

@@ -23,11 +23,11 @@ class Weixin::ApplicationController < ActionController::Base
       button: [
         { type: 'view',
           name: '商城',
-          url: 'https://jiaanmei.com/wx-shop'
+          url: 'https://vank.com/wx-shop'
         },
         { type: 'view',
           name: '个人中心',
-          url: 'https://jiaanmei.com/wx-shop/user/settings'
+          url: 'https://vank.com/wx-shop/user/settings'
         },
         
         # {
@@ -35,7 +35,7 @@ class Weixin::ApplicationController < ActionController::Base
         #   sub_button: [
         #     { type: 'view',
         #       name: '拔鸡毛',
-        #       url: 'https://jiaanmei.com/wx-shop'
+        #       url: 'https://vank.com/wx-shop'
         #     }
         #   ]
         # },
@@ -45,22 +45,22 @@ class Weixin::ApplicationController < ActionController::Base
         #     {
         #       type: 'view',
         #       name: '我的订单',
-        #       url: 'https://jiaanmei.com/wx-shop/orders'
+        #       url: 'https://vank.com/wx-shop/orders'
         #     },
         #     {
         #       type: 'view',
         #       name: '个人中心',
-        #       url: 'https://jiaanmei.com/wx-shop/user/settings'
+        #       url: 'https://vank.com/wx-shop/user/settings'
         #     },
         #     {
         #       type: 'view',
         #       name: '优惠券',
-        #       url: 'https://jiaanmei.com/wx-shop/coupons'
+        #       url: 'https://vank.com/wx-shop/coupons'
         #     },
         #     {
         #       type: 'view',
         #       name: '帮助',
-        #       url: 'https://jiaanmei.com/wx-shop/p/help'
+        #       url: 'https://vank.com/wx-shop/p/help'
         #     }
         #   ]
         # }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>凡客 - 热卖单品</title>
+  <link rel="shortcut icon" href="<%= image_url('fanke.ico') %>" />
+  <meta name="keywords" content="凡客，深圳凡客，智能家居，智能安防，智能网关，智能锁，指纹锁，密码锁，电子锁，app开锁，远程开锁，wifi，zigbee，蓝牙，433，低功耗" />
+  <meta name="description" content="凡客，王力，盼盼，天地钩，万能互换，代理，加盟，六合一，记录，安全" />
+  <%= stylesheet_link_tag 'animate', 'bootsnav', 'bootstrap.min', 'font-awesome.min', 'home/style' %>
+  <!-- share start -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+  <!-- share end -->
+
+  <%= javascript_include_tag 'jquery-2.1.1.min',
+                             'bootstrap.min',
+                             'bootsnav' %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'home/respond.min.js', 'home/html5shiv.min.js' %>
+  <![endif]-->
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- header start -->
+<div id="header">
+  <%= render 'share/header' %>
+</div>
+<!-- header end -->
+
+<!-- products start -->
+<div class="jam-index-product jam-index-body">
+  <div class="container box-up">
+    <div class="row">
+      <div class="area-title">
+        <h3 class="visible" data-plugin="appear" data-animate="fade" data-repeat="false">热卖单品</h3>
+        <p class="desc visible" data-plugin="appear" data-animate="fade" data-repeat="false">Hot sale</p>
+      </div>
+
+      <div class="index_product grey-product" >
+        <div class="col-md-6 index-product-cover">
+          <a href="/products/gateway" title="智能网关">
+            <%= image_tag('share/product/gateway.png') %>
+          </a>
+        </div>
+
+      <% @products.each_with_index do |product, i| %>
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-product-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div id="products_<%= i %>_carousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#products_<%= i %>_carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#products_<%= i %>_carousel" data-slide-to="1"></li>
+                  <li data-target="#products_<%= i %>_carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                <%- product.images.each_with_index do |image, index| -%>
+                  <div class="item <%= index == 0 ? "active" : "" %>">
+                    <div class="center">
+                      <a href="/products/<%= product.id %>" target='_self'>
+                        <%= image_tag image.url(:thumb) %>
+                      </a>
+                    </div>
+                  </div>
+                <%- end -%>
+                </div>
+              </div>
+            </figure>
+            <h4 class="widget-title">
+              <a href="/products/<%= product.id %>">
+                <%=h product.title %>
+              </a>
+              <p><%= strip_tags(product.intro) %></p>
+              <span class="btn-detail">
+                <a href="/products/<%= product.id %>">查看详情</a>
+              </span>
+              <p class='margin-bottom-0 margin-top-5 product-price'>¥ <%= product.price %></p>
+            </h4>
+          </div>
+        </div>
+      <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- products end -->
+
+<!-- footer start -->
+<div class="footer">
+  <%= render 'share/footer' %>
+</div>
+<!-- footer end -->
+</body>
+</html>

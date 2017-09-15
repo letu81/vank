@@ -13,6 +13,8 @@ permit_params :title, :note, :body, :value, :max_value, :expired_days, :coupon_t
 #   permitted
 # end
 
+menu priority: 1, label: "优惠券", parent: "优惠中心"
+
 filter :title
 filter :note
 filter :value

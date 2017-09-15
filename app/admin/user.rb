@@ -7,7 +7,7 @@ permit_params :list, :of, [:nickname, :avatar, :mobile, :score, :balance], :on, 
 
 actions :index, :show, :edit, :update
 
-menu priority: 2, label: "用户"
+menu priority: 2, label: "用户", parent: "系统管理"
 
 #
 # or

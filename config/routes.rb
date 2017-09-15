@@ -12,11 +12,29 @@ Rails.application.routes.draw do
   get 'news' => 'home#news', as: :news
   get 'service' => 'home#service', as: :service
   get 'faq' => 'home#faq', as: :faq
-  get 'agent' =>'home#agent', as: :agent
+  get 'partners' =>'home#partners', as: :partners
   get 'wap' => 'home#wap', as: :wap
 
   get 'download' => 'download#index', as: :download
   post 'feedback' => 'home#feedback', as: :feedback
+
+  get '/customize' => 'customize#index', as: :customize
+  get '/customize/app' => 'customize#app', as: :customize_app
+  get '/customize/web' => 'customize#web', as: :customize_web
+  get '/customize/gateway' => 'customize#gateway', as: :customize_gateway
+  get '/customize/lock' => 'customize#lock', as: :customize_lock
+  get '/customize/wechat/subscription' => 'customize#wechat_subscription', as: :customize_wechat_subscription
+  get '/customize/wechat/applet' => 'customize#wechat_applet', as: :customize_wechat_applet
+  get '/customize/alipay/applet' => 'customize#alipay_applet', as: :customize_alipay_applet
+
+  resources :products, only: [:index, :show] do
+    collection do
+      get :gateway
+      get :lock
+    end
+  end
+
+  get 'search' => 'search#query', as: :search
 
   ######################### 微信公众平台开发 ###########################
   post '/wechat' => 'weixin/home#welcome', defaults: { format: 'xml' }

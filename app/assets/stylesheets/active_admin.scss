@@ -33,3 +33,44 @@
       word-wrap: break-word;
     }
   }
+
+
+/* Overriding datapicker start */
+.ui-datepicker {
+    background: #fff;
+    background-clip: padding-box;
+    color: #fff;
+    display: none;
+    margin: 2px 0 0 -68px !important;
+    text-align: center;
+    width: 160px;
+}
+
+.ui-datepicker .ui-datepicker-header {
+    height: 14px;
+    background-color: #6a7176;
+    background-image: linear-gradient(180deg, #6a7176, #4d5256);
+    border-bottom: 1px solid #44484b;
+    padding: 12px 16px 7px 17px;
+    margin: 0px 0px 2px 2px;
+    width: 147px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    position: relative;
+    z-index: 2000;
+}
+
+.ui-datepicker table.ui-datepicker-calendar {
+  border-radius: 0;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.26);
+  background-color: #f4f4f4;
+  border: solid 1px #63686e;
+  left: 2px;
+  margin-bottom: 0px;
+  position: relative;
+  top: -2px;
+  width: 180px !important;
+}
+/* Overriding datapicker end */

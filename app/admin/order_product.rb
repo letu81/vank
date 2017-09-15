@@ -3,7 +3,7 @@ ActiveAdmin.register OrderProduct do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
-permit_params :order_id, :unit, :price, :quantity, :shipment_quantity, { product_images: [] }, :pack_cost, :shipment_cost
+permit_params :order_id, :unit, :price, :quantity, :shipment_quantity, { product_images: {} }, :pack_cost, :shipment_cost
 #
 # or
 #
@@ -12,6 +12,9 @@ permit_params :order_id, :unit, :price, :quantity, :shipment_quantity, { product
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
+
+menu priority: 2, label: "订单信息统计", parent: "订单中心"
+
 actions :all, except: [:show, :destroy]
 
 index do

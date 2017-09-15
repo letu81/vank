@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>凡客 - 定制中心</title>
+  <link rel="shortcut icon" href="<%= image_url('fanke.ico') %>" />
+  <meta name="keywords" content="凡客，深圳凡客，智能家居，智能安防，智能网关，智能锁，指纹锁，密码锁，电子锁，app开锁，远程开锁，wifi，zigbee，蓝牙，433，RFID，射频识别，低功耗，无线，热点，双向，方案，定制，公众号，小程序" />
+  <meta name="description" content="凡客，王力，盼盼，天地钩，万能互换，代理，加盟，六合一，记录，安全，便捷，省心，稳定，实惠，性价比高，好用，简洁，推荐，淘宝，天猫，京东，网购，值得买，优惠，团购，直销，原厂，专业" />
+  <%= stylesheet_link_tag 'animate', 'bootsnav', 'bootstrap.min', 'font-awesome.min', 'home/style' %>
+
+  <!-- share start -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+  <!-- share end -->
+
+  <%= javascript_include_tag 'jquery-2.1.1.min',
+                             'bootstrap.min',
+                             'bootsnav' %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'home/respond.min.js', 'home/html5shiv.min.js' %>
+  <![endif]-->
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- header start -->
+<div id="header">
+  <%= render 'share/header' %>
+</div>
+<!-- header end -->
+
+<!-- customize start -->
+<div class="jam-index-product jam-index-body">
+  <div class="container">
+    <div class="row">
+      <div class="area-title">
+        <h3 class="visible" data-plugin="appear" data-animate="fade" data-repeat="false">专业定制</h3>
+        <p class="desc visible" data-plugin="appear" data-animate="fade" data-repeat="false">Customize</p>
+        </a>
+      </div>
+
+      <div class="index_product grey-product">
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-product-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div id="app_carousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#app_carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#app_carousel" data-slide-to="1"></li>
+                  <li data-target="#app_carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                <%- (1..3).each do |i| -%>
+                  <div class="item <%= i==1 ? "active": "" %>">
+                    <div class="center">
+                      <a href="/customize/app" title="APP定制" target='_self'>
+                        <img src="<%= image_path("share/app/#{i}.png")%>" alt="app定制">
+                      </a>
+                    </div>
+                  </div>
+                <%- end -%>
+                </div>
+              </div> 
+            </figure>
+            <h4 class="widget-title">
+              <a href="/customize/app" title="APP定制" target='_self'>APP定制</a>
+              <p>Android/IOS 手机APP开发，专业量身定制，精雕细磨，匠人精神打造每一个精美APP</p>
+              <span class="btn-detail"><a href="/customize/app" title="APP定制" target='_self'>查看详情</a></span>
+            </h4>
+          </div>
+        </div>
+
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-product-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div id="web_carousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#web_carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#web_carousel" data-slide-to="1"></li>
+                  <li data-target="#web_carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                <%- (1..3).each do |i| -%>
+                  <div class="item <%= i==1 ? "active": "" %>">
+                    <div class="center">
+                      <a href="/customize/web" title="网站定制" target='_self'>
+                        <img src="<%= image_path("share/web/#{i}.png")%>" alt="网站定制">
+                      </a>
+                    </div>
+                  </div>
+                <%- end -%>
+                </div>
+              </div> 
+            </figure>
+            <h4 class="widget-title">
+              <a href="/customize/web" title="网站定制" target='_self'>网站定制</a>
+              <p>根据您的需求开发各种网站，如企业展示平台、OA办公系统、进销存管理系统等</p>
+              <span class="btn-detail"><a href="/customize/web" title="网站定制" target='_self'>查看详情</a></span>
+            </h4>
+          </div>
+        </div>
+
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-product-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div id="subscription_carousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#subscription_carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#subscription_carousel" data-slide-to="1"></li>
+                  <li data-target="#subscription_carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                <%- (1..3).each do |i| -%>
+                  <div class="item <%= i==1 ? "active": "" %>">
+                    <div class="center">
+                      <a href="/customize/wechat/subscription" title="微信公众号定制" target='_self'>
+                        <img src="<%= image_path("share/subscription/#{i}.png")%>" alt="微信公众号定制">
+                      </a>
+                    </div>
+                  </div>
+                <%- end -%>
+                </div>
+              </div> 
+            </figure>
+            <h4 class="widget-title">
+              <a href="/customize/wechat/subscription" title="微信公众号定制" target='_self'>微信公众号定制</a>
+              <p>全新推出微信公众平台功能开发，根据您的需要专业定制</p>
+              <span class="btn-detail"><a href="/customize/wechat/subscription" title="微信公众号定制" target='_self'>查看详情</a></span>
+            </h4>
+          </div>
+        </div>
+
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-product-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div id="applet_carousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#applet_carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#applet_carousel" data-slide-to="1"></li>
+                  <li data-target="#applet_carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                <%- (1..3).each do |i| -%>
+                  <div class="item <%= i==1 ? "active": "" %>">
+                    <div class="center">
+                      <a href="/customize/wechat/applet" title="微信小程序定制" target='_self'>
+                        <img src="<%= image_path("share/applet/#{i}.png")%>" alt="微信小程序定制">
+                      </a>
+                    </div>
+                  </div>
+                <%- end -%>
+                </div>
+              </div> 
+            </figure>
+            <h4 class="widget-title">
+              <a href="/customize/wechat/applet" title="微信小程序定制" target='_self'>微信小程序定制</a>
+              <p>为企业、团队、个人量身订做实用微信小程序，成功搭载微信小程序这波红利</p>
+              <span class="btn-detail"><a href="/customize/wechat/applet" title="微信小程序定制" target='_self'>查看详情</a></span>
+            </h4>
+          </div>
+        </div>
+
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-product-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div id="alipay_applet_carousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#alipay_applet_carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#alipay_applet_carousel" data-slide-to="1"></li>
+                  <li data-target="#alipay_applet_carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                <%- (1..3).each do |i| -%>
+                  <div class="item <%= i==1 ? "active": "" %>">
+                    <div class="center">
+                      <a href="/customize/alipay/applet" title="支付宝小程序定制" target='_self'>
+                        <img src="<%= image_path("share/alipay/#{i}.png")%>" alt="支付宝小程序定制">
+                      </a>
+                    </div>
+                  </div>
+                <%- end -%>
+                </div>
+              </div> 
+            </figure>
+            <h4 class="widget-title">
+              <a href="/customize/alipay/applet" title="微信小程序定制" target='_self'>支付宝小程序定制</a>
+              <p>亲，支付宝小程序定制也可联系我们哦</p>
+              <span class="btn-detail"><a href="/customize/alipay/applet" title="支付宝小程序定制" target='_self'>查看详情</a></span>
+            </h4>
+          </div>
+        </div>
+
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-product-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div id="gateway_carousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#gateway_carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#gateway_carousel" data-slide-to="1"></li>
+                  <li data-target="#gateway_carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                <%- (1..3).each do |i| -%>
+                  <div class="item <%= i==1 ? "active": "" %>">
+                    <div class="center">
+                      <a href="/customize/gateway" title="智能网关定制" target='_self'>
+                        <img src="<%= image_path("share/gateway/#{i}.png")%>" alt="智能网关定制">
+                      </a>
+                    </div>
+                  </div>
+                <%- end -%>
+                </div>
+              </div> 
+            </figure>
+            <h4 class="widget-title">
+              <a href="/customize/gateway" title="智能网关定制" target='_self'>智能网关定制</a>
+              <p>为厂家、代理量身订做智能网关，成功搭载物联网这波红利</p>
+              <span class="btn-detail"><a href="/customize/gateway" title="智能网关定制" target='_self'>查看详情</a></span>
+            </h4>
+          </div>
+        </div>
+
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-product-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div id="lock_carousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#lock_carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#lock_carousel" data-slide-to="1"></li>
+                  <li data-target="#lock_carousel" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                <%- (1..3).each do |i| -%>
+                  <div class="item <%= i==1 ? "active": "" %>">
+                    <div class="center">
+                      <a href="/customize/lock" title="指纹锁定制" target='_self'>
+                        <img src="<%= image_path("share/lock/#{i}.png")%>" alt="指纹锁定制">
+                      </a>
+                    </div>
+                  </div>
+                <%- end -%>
+                </div>
+              </div> 
+            </figure>
+            <h4 class="widget-title">
+              <a href="/customize/lock" title="指纹锁定制" target='_self'>指纹锁定制</a>
+              <p>为锁厂、代理量身订做指纹锁方案</p>
+              <span class="btn-detail"><a href="/customize/lock" title="指纹锁定制" target='_self'>查看详情</a></span>
+            </h4>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- customize end -->
+
+<!-- footer start -->
+<div class="footer">
+  <%= render 'share/footer' %>
+</div>
+<!-- footer end -->
+</body>
+</html>

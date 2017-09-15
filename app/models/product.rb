@@ -5,6 +5,7 @@ class Product < ActiveRecord::Base
   
   mount_uploaders :images, PictureUploader
   mount_uploaders :detail_images, DetailImageUploader
+  mount_uploaders :param_images, ParamImageUploader
   
   scope :no_delete, -> { where(visible: true) }
   scope :saled,     -> { where(on_sale: true) }
@@ -12,11 +13,15 @@ class Product < ActiveRecord::Base
   scope :hot,       -> { order('visit desc, orders_count desc') }
   scope :recent,    -> { order('id desc') }
   
+  serialize :images, Array
+  serialize :detail_images, Array
+  serialize :param_images, Array
+
   # 价格检查
   validate :price_lower_than_or_equal_to_m_price
   def price_lower_than_or_equal_to_m_price
     if price > m_price
-      errors.add(:base, '我们的价格不能大于市场价')
+      errors.add(:base, '我们的促销价不能大于市场价')
       return false
     end
   end
@@ -52,5 +57,13 @@ class Product < ActiveRecord::Base
   
   def add_visit
     self.class.increment_counter(:visit, self.id)
+  end
+
+  def self.except(ids)
+    if ids.is_a?(Array)
+      where('id not in (?)', ids) unless ids.empty?
+    else
+      where('id != ?', ids)
+    end
   end
 end

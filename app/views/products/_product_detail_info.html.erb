@@ -1,0 +1,26 @@
+<div class="panel panel-product">
+	<ul class="nav nav-tabs">
+		<li class="active">
+			<a href="#product-info" data-toggle="tab">产品详情</a>
+		</li>
+		<li>
+			<a href="#product-param" data-toggle="tab">规格参数</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div class="tab-pane fade in active" id="product-info">
+		    <div class="detail-info">
+				<%- product.detail_images.each do |img| -%>
+		  		<span><%= image_tag img, class: 'img-responsive' %></span>
+		  		<%- end -%>
+			</div>
+		</div>
+		<div class="tab-pane fade" id="product-param">
+			<div class="detail-info">
+			<%- product.param_images.each do |img| -%>
+		  		<span><%= image_tag img, class: 'img-responsive' %></span>
+		  	<%- end -%>
+			</div>
+		</div>
+	</div>
+</div>

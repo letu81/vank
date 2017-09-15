@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>凡客 - 网站定制</title>
+  <link rel="shortcut icon" href="<%= image_url('fanke.ico') %>" />
+  <meta name="keywords" content="凡客，深圳凡客，智能家居，智能安防，智能网关，智能锁，指纹锁，密码锁，电子锁，app开锁，远程开锁，wifi，zigbee，蓝牙，433，RFID，射频识别，低功耗，无线，热点，双向，方案，定制，公众号，小程序" />
+  <meta name="description" content="凡客，王力，盼盼，天地钩，万能互换，代理，加盟，六合一，记录，安全，便捷，省心，稳定，实惠，性价比高，好用，简洁，推荐，淘宝，天猫，京东，网购，值得买，优惠，团购，直销，原厂，专业" />
+  <%= stylesheet_link_tag 'animate', 'bootsnav', 'bootstrap.min', 'font-awesome.min', 'home/style', 'customize/customize' %>
+
+  <!-- share start -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+  <!-- share end -->
+
+  <%= javascript_include_tag 'jquery-2.1.1.min',
+                             'bootstrap.min',
+                             'bootsnav' %>
+  <!--[if lt IE 9]>
+    <%= javascript_include_tag 'home/respond.min.js', 'home/html5shiv.min.js' %>
+  <![endif]-->
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- header start -->
+<div id="header">
+  <%= render 'share/header' %>
+</div>
+<!-- header end -->
+
+<!-- team start -->
+<div class="jam-index-customize">
+  <div class="container">
+    <div class="team">
+      <%= image_tag('customize/team.png') %>
+    </div>
+  </div>
+</div>
+<!-- team end -->
+
+<!-- web customize start -->
+<div class="jam-index-customize jam-index-body">
+  <div class="container">
+    <div class="row">
+      <div class="area-title">
+        <h3 class="visible" data-plugin="appear" data-animate="fade" data-repeat="false">网站定制</h3>
+        <p class="desc visible" data-plugin="appear" data-animate="fade" data-repeat="false">Customize web</p>
+        </a>
+      </div>
+
+      <div class="index_customize">
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-customize-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div class="center">
+                <a href="javascript:void(0);" title="政府网站定制">
+                  <img src="<%=image_path('customize/government.png')%>" alt="政府网站定制">
+                </a>
+              </div>
+            </figure>
+            <h4 class="widget-title">
+              <a href="javascript:void(0);" title="政府APP定制">政府</a>
+            </h4>
+          </div>
+        </div>
+
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-customize-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div class="center">
+                <a href="javascript:void(0);" title="旅游网站定制">
+                  <img src="<%=image_path('customize/tour.png')%>" alt="旅游网站定制">
+                </a>
+              </div>
+            </figure>
+            <h4 class="widget-title">
+              <a href="javascript:void(0);" title="旅游网站定制">旅游</a>
+            </h4>
+          </div>
+        </div>
+
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-customize-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div class="center">
+                <a href="javascript:void(0);" title="地产网站定制">
+                  <img src="<%=image_path('customize/housing.png')%>" alt="地产网站定制">
+                </a>
+              </div>
+            </figure>
+            <h4 class="widget-title">
+              <a href="javascript:void(0);" title="地产网站定制">地产</a>
+            </h4>
+          </div>
+        </div>
+
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-customize-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div class="center">
+                <a href="javascript:void(0);" title="酒店网站定制">
+                  <img src="<%=image_path('customize/hotel.png')%>" alt="酒店网站定制">
+                </a>
+              </div>
+            </figure>
+            <h4 class="widget-title">
+              <a href="javascript:void(0);" title="酒店网站定制">酒店</a>
+            </h4>
+          </div>
+        </div>
+
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-customize-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div class="center">
+                <a href="javascript:void(0);" title="电商网站定制">
+                  <img src="<%=image_path('customize/mall.png')%>" alt="电商网站定制">
+                </a>
+              </div>
+            </figure>
+            <h4 class="widget-title">
+              <a href="javascript:void(0);" title="电商网站定制">电商</a>
+            </h4>
+          </div>
+        </div>
+
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-customize-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div class="center">
+                <a href="javascript:void(0);" title="珠宝网站定制">
+                  <img src="<%=image_path('customize/jewelry.png')%>" alt="珠宝网站定制">
+                </a>
+              </div>
+            </figure>
+            <h4 class="widget-title">
+              <a href="javascript:void(0);" title="珠宝网站定制">珠宝</a>
+            </h4>
+          </div>
+        </div>
+
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-customize-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div class="center">
+                <a href="javascript:void(0);" title="医疗网站定制">
+                  <img src="<%=image_path('customize/medical.png')%>" alt="医疗网站定制">
+                </a>
+              </div>
+            </figure>
+            <h4 class="widget-title">
+              <a href="javascript:void(0);" title="医疗网站定制">医疗</a>
+            </h4>
+          </div>
+        </div>
+
+        <div data-plugin='appear' data-animate='fade' data-repeat='false' class="col-md-3 col-xs-6 index-customize-item">
+          <div class="widget widget-shadow">
+            <figure class="widget-header cover">
+              <div class="center">
+                <a href="javascript:void(0);" title="分销网站定制">
+                  <img src="<%=image_path('customize/crm.png')%>" alt="酒店网站定制">
+                </a>
+              </div>
+            </figure>
+            <h4 class="widget-title">
+              <a href="javascript:void(0);" title="分销网站定制">分销</a>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- web customize end -->
+
+<!-- web sample start -->
+<div class="jam-index-customize jam-index-body">
+  <div class="container">
+    <div class="row">
+      <div class="area-title">
+        <h3 class="visible" data-plugin="appear" data-animate="fade" data-repeat="false">网站案例</h3>
+        <p class="desc visible" data-plugin="appear" data-animate="fade" data-repeat="false"> Web sample</p>
+        </a>
+      </div>
+
+      <div class="index_customize">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- web sample end -->
+
+<!-- footer start -->
+<div class="footer">
+  <%= render 'share/footer' %>
+</div>
+<!-- footer end -->
+</body>
+</html>

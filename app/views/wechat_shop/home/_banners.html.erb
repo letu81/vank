@@ -14,7 +14,7 @@
     <div class="carousel-inner" role="listbox">
       <% @banners.each_with_index do |banner, index| %>
         <div class="item <%= index == 0 ? "active" : "" %>" onclick="App.openUrl('<%= banner.link %>')">
-          <%= image_tag banner.image.url(:large), class: 'img-responsive' %>
+          <%= image_tag banner.image.url(:large).gsub("%5B%22", "").gsub("%22%5D", ""), class: 'img-responsive' %>
         </div>
       <% end %>
     </div>

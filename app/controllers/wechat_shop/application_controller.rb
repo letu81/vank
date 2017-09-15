@@ -22,7 +22,7 @@ class WechatShop::ApplicationController < ActionController::Base
   
   helper_method :render_page_title
   def render_page_title
-    site_name = "佳安美"
+    site_name = "凡客"
     @page_title || site_name
     # content_tag(:title, title, nil, false)
   end
